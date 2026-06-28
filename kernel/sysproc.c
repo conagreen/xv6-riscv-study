@@ -107,3 +107,10 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+// Return the amount of free physical memory in bytes.
+uint64
+sys_freemem(void)
+{
+  return kfreemem();
+}
